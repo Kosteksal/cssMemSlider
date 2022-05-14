@@ -2,6 +2,16 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    background-color: grey;
+  }
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+}
+
 .container {
     width: 80%;
     height: 100vh;
@@ -13,16 +23,14 @@
 }
 
 .slide-container {
-    height: 30em;
-    width: 45em;
+    width: 70vw;
+    height: 90vw;
     display: flex;
+    border-radius: 10px;
+    border: 5px solid black;
     overflow: hidden;
-}
-
-.meme-container {
-    height: 100%;
-    width: 400%;
-    display: flex;
+    background-image: url(../cssMemSlider/mems/0.jpg);
+    background-size: 100% 100%;
     transition: 0.4s cubic-bezier(0.89, 0.01, 0.17, 0.99);
 }
 
@@ -36,19 +44,20 @@ img {
 }
 
 .btns {
-    height: 2em;
-    width: 10em;
-    background-color: red;
+    height: 2rem;
+    width: 10rem;
     display: flex;
     justify-content: space-between;
 }
 
 .btn {
-    height: 80%;
-    width: 20%;
+    height: 100%;
+    width: 2em;
     background-color: green;
+    border: 8px solid rgba(128, 128, 128, 1);
     border-radius: 1em;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .btn:hover {
@@ -56,18 +65,21 @@ img {
 }
 
 .controls {
+    margin-top: 2em;
     display: flex;
+    width: 70vw;
+    justify-content: space-between;
 }
 
 .name {
     font-family: 'Lobster', cursive;
-    font-size: 2em;
-    margin-right: 3em;
+    font-size: 1.6vw;
+    margin-right: 3.5em;
 }
 
 .names {
-    height: 2.5em;
-    width: 35em;
+    height: 4vw;
+    width: 40vw;
     overflow: hidden;
 }
 
@@ -78,20 +90,28 @@ img {
 
 
 
-#p1:checked ~ .slide-container > .margin {
-    margin-left: 0;
+#p1:checked ~ .slide-container  {
+    transform: rotate(720deg);
+    background-image: url(../cssMemSlider/mems/0.jpg);
+    animation: bounce 0.3s 1 ease-in-out;
 }
 
-#p2:checked ~ .slide-container > .margin {
-    margin-left: -100%;
+#p2:checked ~ .slide-container {
+    transform: rotate(720deg);
+    background-image: url(../cssMemSlider/mems/1.png);
+    animation: bounce1 0.3s 1 ease-in-out;
 }
 
-#p3:checked ~ .slide-container > .margin {
-    margin-left: -200%;
+#p3:checked ~ .slide-container  {
+    transform: rotate(720deg);
+    background-image: url(../cssMemSlider/mems/2.jpg);
+    animation: bounce2 0.3s 1 ease-in-out;
 }
 
-#p4:checked ~ .slide-container > .margin {
-    margin-left: -300%;
+#p4:checked ~ .slide-container {
+    transform: rotate(720deg);
+    background-image: url(../cssMemSlider/mems/3.jpg);
+    animation: bounce3 0.3s 1 ease-in-out;
 }
 
 
@@ -110,4 +130,47 @@ img {
 #p4:checked ~ .controls > .btns > .b4 {
     background-color: orange;
 }
+
+
+@keyframes bounce {
+    from {
+        transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: rotate(720deg);
+    }
+  }
+
+  @keyframes bounce1 {
+    from {
+        transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: rotate(720deg);
+    }
+  }
+
+
+  @keyframes bounce2 {
+    from {
+        transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: rotate(720deg);
+    }
+  }
+
+
+  @keyframes bounce3 {
+    from {
+        transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: rotate(720deg);
+    }
+  }
 
