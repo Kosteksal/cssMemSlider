@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide-container {
+    height: 30em;
+    width: 45em;
+    display: flex;
+    overflow: hidden;
+}
+
+.meme-container {
+    height: 100%;
+    width: 400%;
+    display: flex;
+    transition: 0.4s cubic-bezier(0.89, 0.01, 0.17, 0.99);
+}
+
+input {
+    display: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.btns {
+    height: 2em;
+    width: 10em;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    height: 80%;
+    width: 20%;
+    background-color: green;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+
+
+
+#p1:checked ~ .margin {
+    margin-left: 0;
+}
+
+#p2:checked ~ .margin {
+    margin-left: -100%;
+}
+
+#p3:checked ~ .margin {
+    margin-left: -200%;
+}
+
+#p4:checked ~ .margin {
+    margin-left: -300%;
+}
