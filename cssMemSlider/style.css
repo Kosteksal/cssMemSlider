@@ -55,21 +55,59 @@ img {
     background-color: blue;
 }
 
+.controls {
+    display: flex;
+}
+
+.name {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-right: 3em;
+}
+
+.names {
+    height: 2.5em;
+    width: 35em;
+    overflow: hidden;
+}
+
+.names-container {
+    width: 400%;
+}
 
 
 
-#p1:checked ~ .margin {
+
+#p1:checked ~ .slide-container > .margin {
     margin-left: 0;
 }
 
-#p2:checked ~ .margin {
+#p2:checked ~ .slide-container > .margin {
     margin-left: -100%;
 }
 
-#p3:checked ~ .margin {
+#p3:checked ~ .slide-container > .margin {
     margin-left: -200%;
 }
 
-#p4:checked ~ .margin {
+#p4:checked ~ .slide-container > .margin {
     margin-left: -300%;
 }
+
+
+#p1:checked ~ .controls > .btns > .b1 {
+    background-color: orange;
+}
+
+#p2:checked ~ .controls > .btns > .b2 {
+    background-color: orange;
+}
+
+#p3:checked ~ .controls > .btns > .b3 {
+    background-color: orange;
+}
+
+#p4:checked ~ .controls > .btns > .b4 {
+    background-color: orange;
+}
+

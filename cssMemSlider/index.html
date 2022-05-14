@@ -7,16 +7,17 @@
     <title>cssMemSlider</title>
     <link rel="stylesheet" href="../cssMemSlider/style.css">
     <link rel="stylesheet" href="../cssMemSlider/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+        <input type="radio" name="slides" id="p1" checked>
+        <input type="radio" name="slides" id="p2">
+        <input type="radio" name="slides" id="p3">
+        <input type="radio" name="slides" id="p4">
         <div class="slide-container">
-            
-                <input type="radio" name="slides" id="p1" checked>
-                <input type="radio" name="slides" id="p2">
-                <input type="radio" name="slides" id="p3">
-                <input type="radio" name="slides" id="p4">
-            
             <div class="meme-container margin">
                 <img class="" src="../cssMemSlider/mems/0.jpg" alt="mem">
                 <img class="" src="../cssMemSlider/mems/1.png" alt="mem">
@@ -26,10 +27,12 @@
         </div>
         <div class="controls">
             <div class="names">
-                <span class="name"></span>
-                <span class="name"></span>
-                <span class="name"></span>
-                <span class="name"></span>
+                <div class="names-container">
+                    <span class="name">Когда правильно настроил карбюратор</span>
+                    <span class="name">Ловим универсального донора</span>
+                    <span class="name">Установил фары от шохи</span>
+                    <span class="name">Я не пьяный, я - раллист!</span>
+                </div>
             </div>
             <div class="btns">
                 <label for="p1" class="btn b1"></label>
