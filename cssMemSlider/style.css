@@ -69,49 +69,51 @@ img {
     display: flex;
     width: 70vw;
     justify-content: space-between;
+    align-items: center;
 }
 
 .name {
     font-family: 'Lobster', cursive;
-    font-size: 1.6vw;
-    margin-right: 3.5em;
+    font-size: 2vw;
+    display: none;
+    transition: 0.9s cubic-bezier(0.89, 0.01, 0.17, 0.99);
 }
 
 .names {
     height: 4vw;
     width: 40vw;
     overflow: hidden;
+    transition: 0.7s cubic-bezier(0.89, 0.01, 0.17, 0.99);
 }
 
 .names-container {
-    width: 400%;
 }
 
 
 
 
 #p1:checked ~ .slide-container  {
-    transform: rotate(720deg);
+    transform: rotate(360deg);
     background-image: url(../cssMemSlider/mems/0.jpg);
-    animation: bounce 0.3s 1 ease-in-out;
+    animation: bounce 0.6s 1 ease-in-out;
 }
 
 #p2:checked ~ .slide-container {
-    transform: rotate(720deg);
+    transform: rotate(deg);
     background-image: url(../cssMemSlider/mems/1.png);
-    animation: bounce1 0.3s 1 ease-in-out;
+    animation: bounce1 0.6s 1 ease-in-out;
 }
 
 #p3:checked ~ .slide-container  {
     transform: rotate(720deg);
     background-image: url(../cssMemSlider/mems/2.jpg);
-    animation: bounce2 0.3s 1 ease-in-out;
+    animation: bounce2 0.6s 1 ease-in-out;
 }
 
 #p4:checked ~ .slide-container {
     transform: rotate(720deg);
     background-image: url(../cssMemSlider/mems/3.jpg);
-    animation: bounce3 0.3s 1 ease-in-out;
+    animation: bounce3 0.6s 1 ease-in-out;
 }
 
 
@@ -134,43 +136,107 @@ img {
 
 @keyframes bounce {
     from {
-        transform: rotate(0deg);
+        transform: scaleX(-1);
       animation-timing-function: ease-out;
     }
     to {
-        transform: rotate(720deg);
+        transform: scaleX(1);
     }
   }
 
   @keyframes bounce1 {
     from {
-        transform: rotate(0deg);
+        transform: scaleX(-1);
       animation-timing-function: ease-out;
     }
     to {
-        transform: rotate(720deg);
+        transform: scaleX(1);
     }
   }
 
 
   @keyframes bounce2 {
     from {
-        transform: rotate(0deg);
+        transform: scaleX(-1);
       animation-timing-function: ease-out;
     }
     to {
-        transform: rotate(720deg);
+        transform: scaleX(1);
     }
   }
 
 
   @keyframes bounce3 {
     from {
-        transform: rotate(0deg);
+        transform: scaleX(-1);
       animation-timing-function: ease-out;
     }
     to {
-        transform: rotate(720deg);
+        transform: scaleX(1);
+    }
+  }
+
+#p1:checked ~ .controls > .names > .names-container > .n1 {
+      display: block;
+      transition: 0.9s cubic-bezier(0.89, 0.01, 0.17, 0.99);
+      animation: boun 0.6s 1 ease-in-out;
+}
+
+#p2:checked ~ .controls > .names > .names-container > .n2 {
+      display: block;
+      transition: 0.9s cubic-bezier(0.89, 0.01, 0.17, 0.99);
+      animation: boun1 0.6s 1 ease-in-out;
+}
+
+#p3:checked ~ .controls > .names > .names-container > .n3 {
+      display: block;
+      transition: 0.9s cubic-bezier(0.89, 0.01, 0.17, 0.99);
+      animation: boun2 0.6s 1 ease-in-out;
+}
+
+#p4:checked ~ .controls > .names > .names-container > .n4 {
+      display: block;
+      transition: 0.9s cubic-bezier(0.89, 0.01, 0.17, 0.99);
+      animation: boun3 0.6s 1 ease-in-out;
+}
+
+@keyframes boun {
+    from {
+        transform: scaleY(-1);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: scaleY(1);
+    }
+  }
+
+  @keyframes boun1 {
+    from {
+        transform: scaleY(-1);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: scaleY(1);
+    }
+  }
+
+  @keyframes boun2 {
+    from {
+        transform: scaleY(-1);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: scaleY(1);
+    }
+  }
+
+  @keyframes boun3 {
+    from {
+        transform: scaleY(-1);
+      animation-timing-function: ease-out;
+    }
+    to {
+        transform: scaleY(1);
     }
   }
 
