@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cssMemSlider</title>
-    <!-- <link rel="stylesheet" href="../cssMemSlider/normalize.css"> -->
     <link rel="stylesheet" href="../cssMemSlider/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,27 +15,37 @@
         <header>
             <h1>Rusted mem slider</h1>
         </header>
-        <input type="radio" name="slides" id="p1" checked>
-        <input type="radio" name="slides" id="p2">
-        <input type="radio" name="slides" id="p3">
-        <input type="radio" name="slides" id="p4">
-        <div class="slide-container"></div>
-        <div class="controls">
-            <div class="names">
-                <div class="names-container">
-                    <span class="name n1">Когда правильно настроил карбюратор</span>
-                    <span class="name n2">Ловим универсального донора</span>
-                    <span class="name n3">Установил фары от шохи</span>
-                    <span class="name n4">Я не пьяный, я - раллист!</span>
+        <main>
+            <input type="radio" name="slides" id="p1" checked>
+            <input type="radio" name="slides" id="p2">
+            <input type="radio" name="slides" id="p3">
+            <input type="radio" name="slides" id="p4">
+            <div class="wrapper">
+                <div class="slide-container">
+                    <div class="slide s1"><img src="../cssMemSlider/mems/0.jpg" alt="meme"></div>
+                    <div class="slide s2"><img src="../cssMemSlider/mems/1.png" alt="meme"></div>
+                    <div class="slide s3"><img src="../cssMemSlider/mems/2.jpg" alt="meme"></div>
+                    <div class="slide s4"><img src="../cssMemSlider/mems/3.jpg" alt="meme"></div>
                 </div>
             </div>
-            <div class="btns">
-                <label for="p1" class="btn b1"></label>
-                <label for="p2" class="btn b2"></label>
-                <label for="p3" class="btn b3"></label>
-                <label for="p4" class="btn b4"></label>
+            
+            <div class="controls">
+                <div class="names">
+                    <div class="names-container">
+                        <span class="name n1">Когда правильно настроил карбюратор</span>
+                        <span class="name n2">Ловим универсального донора</span>
+                        <span class="name n3">Установил фары от шохи</span>
+                        <span class="name n4">Я не пьяный, я - раллист!</span>
+                    </div>
+                </div>
+                <div class="btns">
+                    <label for="p1" class="btn b1"></label>
+                    <label for="p2" class="btn b2"></label>
+                    <label for="p3" class="btn b3"></label>
+                    <label for="p4" class="btn b4"></label>
+                </div>
             </div>
-        </div>
+        </main>
     </div>
 </body>
 </html>

@@ -4,34 +4,41 @@
 
 body {
     margin: 0;
-    background-color: grey;
+    background-color: #b0bec5;
   }
 
 h1 {
     font-family: 'Lobster', cursive;
     font-size: 4em;
+    text-shadow: 3px 3px 10px #e8aa6c;
 }
 
 .container {
     width: 80%;
     height: 100vh;
     margin: 0 auto;
-    background-color: grey;
+    background-color: #b0bec5y;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .slide-container {
-    width: 70vw;
-    height: 90vw;
+    width: 400%;
     display: flex;
+    transition: 0.4s cubic-bezier(0.89, 0.01, 0.17, 0.99);
+}
+
+.wrapper {
+    width: 80%;
+    overflow: hidden;
+    box-shadow: 0px 0px 33px 1px rgb(255, 255, 255);
     border-radius: 10px;
     border: 5px solid black;
-    overflow: hidden;
-    background-image: url(../cssMemSlider/mems/0.jpg);
-    background-size: 100% 100%;
-    transition: 0.4s cubic-bezier(0.89, 0.01, 0.17, 0.99);
+}
+
+.slide {
+    width: 25%;
 }
 
 input {
@@ -39,8 +46,10 @@ input {
 }
 
 img {
-    height: 100%;
     width: 100%;
+    border-radius: 10px;
+    /* border: 5px solid black; */
+    margin: 0;
 }
 
 .btns {
@@ -54,7 +63,7 @@ img {
     height: 100%;
     width: 2em;
     background-color: green;
-    border: 8px solid rgba(128, 128, 128, 1);
+    border: 8px solid #b0bec5;
     border-radius: 1em;
     cursor: pointer;
     transition: 0.4s;
@@ -67,7 +76,7 @@ img {
 .controls {
     margin-top: 2em;
     display: flex;
-    width: 70vw;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
 }
@@ -86,34 +95,23 @@ img {
     transition: 0.7s cubic-bezier(0.89, 0.01, 0.17, 0.99);
 }
 
-.names-container {
+
+
+
+#p1:checked ~ .wrapper > .slide-container  {
+    transform: translate(0%, 0%);
 }
 
-
-
-
-#p1:checked ~ .slide-container  {
-    transform: rotate(360deg);
-    background-image: url(../cssMemSlider/mems/0.jpg);
-    animation: bounce 0.6s 1 ease-in-out;
+#p2:checked ~ .wrapper > .slide-container {
+    transform: translate(-25%, 0%);
 }
 
-#p2:checked ~ .slide-container {
-    transform: rotate(deg);
-    background-image: url(../cssMemSlider/mems/1.png);
-    animation: bounce1 0.6s 1 ease-in-out;
+#p3:checked ~ .wrapper > .slide-container  {
+    transform: translate(-50%, 0%);
 }
 
-#p3:checked ~ .slide-container  {
-    transform: rotate(720deg);
-    background-image: url(../cssMemSlider/mems/2.jpg);
-    animation: bounce2 0.6s 1 ease-in-out;
-}
-
-#p4:checked ~ .slide-container {
-    transform: rotate(720deg);
-    background-image: url(../cssMemSlider/mems/3.jpg);
-    animation: bounce3 0.6s 1 ease-in-out;
+#p4:checked ~ .wrapper > .slide-container {
+    transform: translate(-75%, 0%);
 }
 
 
@@ -134,47 +132,6 @@ img {
 }
 
 
-@keyframes bounce {
-    from {
-        transform: scaleX(-1);
-      animation-timing-function: ease-out;
-    }
-    to {
-        transform: scaleX(1);
-    }
-  }
-
-  @keyframes bounce1 {
-    from {
-        transform: scaleX(-1);
-      animation-timing-function: ease-out;
-    }
-    to {
-        transform: scaleX(1);
-    }
-  }
-
-
-  @keyframes bounce2 {
-    from {
-        transform: scaleX(-1);
-      animation-timing-function: ease-out;
-    }
-    to {
-        transform: scaleX(1);
-    }
-  }
-
-
-  @keyframes bounce3 {
-    from {
-        transform: scaleX(-1);
-      animation-timing-function: ease-out;
-    }
-    to {
-        transform: scaleX(1);
-    }
-  }
 
 #p1:checked ~ .controls > .names > .names-container > .n1 {
       display: block;
