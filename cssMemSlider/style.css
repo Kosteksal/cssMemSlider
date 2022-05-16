@@ -204,7 +204,6 @@ img {
 
   footer {
       display: flex;
-      /* margin-top: 5em; */
       align-items: center;
   }
 
@@ -251,11 +250,5 @@ img {
     .name {
         font-size: 3vw;
     }
-
-
-
-
-
-
 
   }
